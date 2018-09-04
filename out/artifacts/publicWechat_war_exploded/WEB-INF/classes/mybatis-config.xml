@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+
+<configuration>
+
+
+    <settings>
+        <setting name="mapUnderscoreToCamelCase" value="true"/>
+        <!-- 开启二级缓存，默认是false -->
+        <setting name="cacheEnabled" value="true"/>
+        <!-- 打印查询语句 -->
+        <setting name="logImpl" value="STDOUT_LOGGING"/>
+    </settings>
+    <typeAliases>
+        <package name="com.anyzm.wechat.menu"/>
+    </typeAliases>
+    <!--<typeHandlers>-->
+        <!--&lt;!&ndash; 由于自定义的TypeHandler在定义时已经通过注解指定了jdbcType, 所以此处不用再配置jdbcType &ndash;&gt;-->
+        <!--<typeHandler handler="com.pagoda.nerp.goods.common.modifyRecord.JSONHandler"/>-->
+    <!--</typeHandlers>-->
+<!--
+    <plugins> -->
+        <!--<plugin interceptor="com.pagoda.common.paging.PagingInterceptor">-->
+        <!--</plugin>-->
+        <!-- 配置分页插件 -->
+        <!-- com.github.pagehelper为PageHelper类所在包名 -->
+        <!--<plugin interceptor="com.github.pagehelper.PageHelper">-->
+            <!--<property name="dialect" value="mysql"/>-->
+            <!--<property name="pageSizeZero" value="true"/>-->
+            <!--<property name="reasonable" value="true"/>-->
+            <!--&lt;!&ndash; always总是返回PageInfo类型,check检查返回类型是否为PageInfo,none返回Page &ndash;&gt;-->
+            <!--<property name="returnPageInfo" value="check"/>-->
+        <!--</plugin>-->
+
+<!--
+    </plugins>
+-->
+</configuration>
